@@ -31,6 +31,7 @@ Serpscan is a powerfull  php script designed to allow you to leverage the power 
 - [Environment tested](#environment-tested)
 - [Credits](#credits)
 - [Disclaimer](#disclaimer)
+- [Todo](#Todo)
 
 ## About Serpscan
 
@@ -62,10 +63,10 @@ You can run the  tool  in your PC or [VPS].
 | hakrawler         |  https://github.com/hakluke/hakrawler                 |                                              
 
 ## Installtion
-1. git clone  
+1. git clone https://github.com/Alaa-abdulridha/SerpScan.git 
 2. cd SerpScan
-3. chmod 0777 install.sh 
-4. bash install.sh 
+3. chmod 777 install.sh 
+4. ./install.sh 
 
 - You should add your SerpApi Key to the conf.php file 
 - You can grab your key from [serpapi](https://serpapi.com/)
@@ -132,12 +133,13 @@ $engine = [
 php serpscan.php -d target .com -t html
 | Flag             | Description                                                | Example                                |
 | ---------------- | ---------------------------------------------------------- | -------------------------------------- |
-| -d               | Domain to scan  subdomains for	                            | php serpscan.php -d target.com         |
-| -t               | The template of result (html,json)                         | php serpscan.php -d serpscan.php -d target.com -t html|
-| -w               | File containing list of domains to enumerate               | php serpscan.php -d serpscan.php -d target.com  -w domains.txt -t html|
+| -d               | Domain to scan  subdomains for	                            | php start.php -d target.com        |
+| -t               | The template of result (html,json)                         | php start.php -d target.com -t html|
+| -w               | File containing list of domains to enumerate               | php start.php -d target.com  -w domains.txt -t html|
 
 ## Environment tested
 CentOS  & Ubuntu By using the Install.sh
+
 Windows 10, by manually installation.
 ## Results
 <br />
@@ -160,4 +162,12 @@ SerpScan  has been possible thank you to the following projects.
 ## Disclaimer
 
 - SerpScan was written for education purposes only.
+
+## Todo
+Feel free to contribute:
+
+- [ ] Improve the tree view withing the results report.
+- [ ] Improving the report by marking the dead subdomains from the alive ones.
+- [ ] Making the install.sh file to support the other linux distributions.
+- [ ] Creating install.bat to make an easy installation for windows.
 
