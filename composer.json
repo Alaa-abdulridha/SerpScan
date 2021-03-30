@@ -1,0 +1,6 @@
+{
+    "require": {
+        "serpapi/google-search-results-php": "^2.0",
+        "voku/php-domain-parser": "^8.0"
+    }
+}
