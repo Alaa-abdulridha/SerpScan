@@ -148,7 +148,7 @@ Windows 10, by manually installation.
   <a href="https://serpapi.com/">
     <img
       alt="SerpScan"
-      src="Result.jpg"
+      src="SerpScan.gif"
     />
   </a>
 
