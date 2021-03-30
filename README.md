@@ -62,10 +62,10 @@ You can run the  tool  in your PC or [VPS].
 | hakrawler         |  https://github.com/hakluke/hakrawler                 |                                              
 
 ## Installtion
-1. git clone  
+1. git clone https://github.com/Alaa-abdulridha/SerpScan.git 
 2. cd SerpScan
-3. chmod 0777 install.sh 
-4. bash install.sh 
+3. chmod 777 install.sh 
+4. ./install.sh 
 
 - You should add your SerpApi Key to the conf.php file 
 - You can grab your key from [serpapi](https://serpapi.com/)
