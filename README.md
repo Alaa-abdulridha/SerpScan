@@ -132,9 +132,9 @@ $engine = [
 php serpscan.php -d target .com -t html
 | Flag             | Description                                                | Example                                |
 | ---------------- | ---------------------------------------------------------- | -------------------------------------- |
-| -d               | Domain to scan  subdomains for	                            | php serpscan.php -d target.com         |
-| -t               | The template of result (html,json)                         | php serpscan.php -d serpscan.php -d target.com -t html|
-| -w               | File containing list of domains to enumerate               | php serpscan.php -d serpscan.php -d target.com  -w domains.txt -t html|
+| -d               | Domain to scan  subdomains for	                            | php start.php -d target.com        |
+| -t               | The template of result (html,json)                         | php start.php -d target.com -t html|
+| -w               | File containing list of domains to enumerate               | php start.php -d target.com  -w domains.txt -t html|
 
 ## Environment tested
 CentOS  & Ubuntu By using the Install.sh
