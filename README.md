@@ -12,8 +12,6 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Alaa-abdulridha/"><img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Alaa-abdulridha/SerpScan"></a>
-  <a href="https://github.com/Alaa-abdulridha/"><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Alaa-abdulridha/SerpScan"></a>
   <a href="https://github.com/Alaa-abdulridha/"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Alaa-abdulridha/SerpScan"></a>
   <a href="https://github.com/Alaa-abdulridha/"><img alt="GitHub issues" src="https://img.shields.io/github/issues/Alaa-abdulridha/SerpScan"></a>
 
