@@ -82,6 +82,7 @@ ini_set('max_execution_time', 0);
 set_time_limit(0);
 date_default_timezone_set('Asia/Riyadh');
 
+// Replace with your API key.
 $APIKey = 'API_KEY'
 
 $outputPath = 'result';
