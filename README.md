@@ -162,3 +162,11 @@ SerpScan  has been possible thank you to the following projects.
 
 - SerpScan was written for education purposes only.
 
+## Todo
+Feel free to contribute:
+
+- [ ] Improve the tree view withing the results report.
+- [ ] Improving the report by marking the dead subdomains from the alive ones.
+- [ ] Making the install.sh file to support the other linux distributions.
+- [ ] Creating install.bat to make an easy installation for windows.
+
