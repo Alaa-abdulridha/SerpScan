@@ -136,7 +136,7 @@ php serpscan.php -d target .com -t html
 | ---------------- | ---------------------------------------------------------- | -------------------------------------- |
 | -d               | Domain to scan  subdomains for	                            | php start.php -d target.com -t html       |
 | -t               | The template of result (html,json)                         | php start.php -d target.com -t html|
-| -w               | File containing list of domains to enumerate               | php start.php -d target.com  -w domains.txt -t html|
+| -w               | File containing list of domains to enumerate               | php start.php -w domains.txt -t html|
 
 ## Environment tested
 CentOS  & Ubuntu By using the Install.sh
