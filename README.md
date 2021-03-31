@@ -25,6 +25,7 @@ Serpscan is a powerfull  php script designed to allow you to leverage the power 
 - [About SerpScan](#about-SerpScan)
 - [Features](#features)
 - [Installtion](#Installtion)
+- [Docker](#Docker)
 - [Usage](#Usage)
 - [Results](#Results)
 - [Prerequisites](#prerequisites)
@@ -67,6 +68,13 @@ You can run the  tool  in your PC or [VPS].
 2. cd SerpScan
 3. chmod 777 install.sh 
 4. ./install.sh 
+
+## Docker
+
+Copy the commaand and use it for docker.
+
+docker run -it alaa0x2/serpscan:latest php /usr/src/SerpScan/start.php -d domain.com -t html
+
 
 - You should add your SerpApi Key to the conf.php file 
 - You can grab your key from [serpapi](https://serpapi.com/)
