@@ -73,8 +73,9 @@ You can run the  tool  in your PC or [VPS].
 
 Copy the commaand and use it for docker.
 
+```
 docker run -it alaa0x2/serpscan:latest php /usr/src/SerpScan/start.php -d domain.com -t html
-
+```
 
 - You should add your SerpApi Key to the conf.php file 
 - You can grab your key from [serpapi](https://serpapi.com/)
