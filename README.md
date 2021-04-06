@@ -63,6 +63,14 @@ You can run the  tool  in your PC or [VPS].
 | httpx             |  https://github.com/projectdiscovery/httpx            |                                               
 | hakrawler         |  https://github.com/hakluke/hakrawler                 |                                              
 
+## Docker
+
+Copy the commaand and use it for docker.
+
+```
+docker run -it alaa0x2/serpscan:latest php /usr/src/SerpScan/start.php -d domain.com -t html
+```
+
 ## Installation
 1. git clone https://github.com/Alaa-abdulridha/SerpScan.git 
 2. cd SerpScan
@@ -73,13 +81,9 @@ You can run the  tool  in your PC or [VPS].
 - You can grab your key from [serpapi](https://serpapi.com/)
 - Also you can add your dorks to the config file without any problems 
 
-## Docker
 
-Copy the commaand and use it for docker.
 
-```
-docker run -it alaa0x2/serpscan:latest php /usr/src/SerpScan/start.php -d domain.com -t html
-```
+
 
 
 
