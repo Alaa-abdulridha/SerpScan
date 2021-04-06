@@ -15,7 +15,7 @@
   <a href="https://github.com/Alaa-abdulridha/"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Alaa-abdulridha/SerpScan"></a>
   <a href="https://github.com/Alaa-abdulridha/"><img alt="GitHub issues" src="https://img.shields.io/github/issues/Alaa-abdulridha/SerpScan"></a>
 
-Serpscan is a powerfull  php script designed to allow you to leverage the power of dorking straight from the comfort of your command line.
+Serpscan is a powerful PHP script designed to allow you to leverage the power of dorking straight from the comfort of your command line.
 
 </p>
 
@@ -24,7 +24,7 @@ Serpscan is a powerfull  php script designed to allow you to leverage the power 
 - [Table of Contents](#table-of-contents)
 - [About SerpScan](#about-SerpScan)
 - [Features](#features)
-- [Installtion](#Installtion)
+- [Installation](#Installation)
 - [Docker](#Docker)
 - [Usage](#Usage)
 - [Results](#Results)
@@ -36,7 +36,7 @@ Serpscan is a powerfull  php script designed to allow you to leverage the power 
 
 ## About Serpscan
 
-Serpscan is a powerfull php script designed to allow you to leverage the power of dorking straight from the comfort of your command line.
+Serpscan is a powerful PHP script designed to allow you to leverage the power of dorking straight from the comfort of your command line.
 
 Serpscan offers powerfull use of (Google,Bing,Yahoo,Yandex,Badiu) search directives, by analyzing results from searches using multiple external tools.
 
@@ -63,11 +63,15 @@ You can run the  tool  in your PC or [VPS].
 | httpx             |  https://github.com/projectdiscovery/httpx            |                                               
 | hakrawler         |  https://github.com/hakluke/hakrawler                 |                                              
 
-## Installtion
+## Installation
 1. git clone https://github.com/Alaa-abdulridha/SerpScan.git 
 2. cd SerpScan
 3. chmod 777 install.sh 
 4. ./install.sh 
+
+- You should add your SerpApi Key to the conf.php file 
+- You can grab your key from [serpapi](https://serpapi.com/)
+- Also you can add your dorks to the config file without any problems 
 
 ## Docker
 
@@ -77,9 +81,7 @@ Copy the commaand and use it for docker.
 docker run -it alaa0x2/serpscan:latest php /usr/src/SerpScan/start.php -d domain.com -t html
 ```
 
-- You should add your SerpApi Key to the conf.php file 
-- You can grab your key from [serpapi](https://serpapi.com/)
-- Also you can add your dorks to the config file without any problems 
+
 
 ```javascript
 <?php
