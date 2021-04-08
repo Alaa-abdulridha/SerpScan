@@ -15,7 +15,7 @@
   <a href="https://github.com/Alaa-abdulridha/"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Alaa-abdulridha/SerpScan"></a>
   <a href="https://github.com/Alaa-abdulridha/"><img alt="GitHub issues" src="https://img.shields.io/github/issues/Alaa-abdulridha/SerpScan"></a>
 
-Serpscan is a powerful PHP script designed to allow you to leverage the power of dorking straight from the comfort of your command line.
+Serpscan is a powerful PHP tool designed to allow you to leverage the power of dorking straight from the comfort of your command line.
 
 </p>
 
