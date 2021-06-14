@@ -5,9 +5,10 @@ require __DIR__ . '/SAPI.class.php';
 
 ini_set('max_execution_time', 0);
 set_time_limit(0);
+// TIME ZONE
 date_default_timezone_set('Asia/Riyadh');
 // Replace with your API key.
-$APIKey = 'a89ab7d75ddaab3c0ece0a1253ee64751148adbe221b1b35863879d8f09edeec';
+$APIKey = 'YOUR API KEY HERE';
 
 $outputPath = 'result';
 $usePackage = true;
