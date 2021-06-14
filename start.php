@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Smart API
+ * SerpScan Based on SerpApi LLC.
  */
 
 require __DIR__ . '/conf.php';
