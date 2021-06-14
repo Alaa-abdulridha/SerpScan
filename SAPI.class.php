@@ -13,7 +13,7 @@ class SAPI_Serp {
 			['yahoo', 'p', ['subDomain' => 'site:.{{DOMAIN}}',]],
 			['yandex', 'text', ['subDomain' => 'site:.{{DOMAIN}}',]]
 		];
-	
+    #C
 	private $_start = false;
 
 	private $_apiKey = '';
@@ -96,7 +96,7 @@ class SAPI_Serp {
 				die($this->printToConsole('There has error when create ('.$outputPath.')', 'red'));
 		else
 			$this->_outputResult = $outputPath;
-#H		
+			#Z
 		return $this->_outputResult;
 	}
 	
@@ -116,8 +116,7 @@ class SAPI_Serp {
 			die($this->printToConsole('Must enter at least one Domain to search!', 'red'));
 
 		for($i=0; $i<count($domains); $i++){
-			// $url = parse_url($domains[$i]['name']);
-			// $domains[$i]['name'] = trim((explode('.', $url['host'])[0]) != 'www' ? $url['host'] : (explode('.', $url['host']))[1].'.'.(explode('.', $url['host']))[2]);
+
 			$domains[$i]['name'] = $this->_parser->parseUrl($domains[$i]['name'])->getHost()->getHost();
 			$domains[$i]['name'] = trim((explode('.', $domains[$i]['name'])[0]) != 'www' ? $domains[$i]['name'] : (explode('.', $domains[$i]['name']))[1].'.'.(explode('.', $domains[$i]['name']))[2]);
 			$this->createDirForDomain($domains[$i]['name']);
@@ -196,7 +195,7 @@ class SAPI_Serp {
 					echo $this->printToConsole(" - Searching in (".$engine[0].") search engine ... ", 'yellow');
 
 
-#A					// Start search with query one by one
+					// Start search with query one by one
 					foreach($engine[2] as $nameQuery => $queryValue){
 						$fullQuery = str_replace('{{DOMAIN}}', $domainData['name'], $queryValue);
 						
@@ -251,8 +250,6 @@ class SAPI_Serp {
 				$dataFiles['packagingData'] = $dataFromPackage;
 				file_put_contents($newNameFile, json_encode($dataFiles));
 
-				// Save all raw results
-				// file_put_contents($newNameFile, json_encode(['searchingData' => $resultSearching, 'packagingData' => $dataFromPackage]));
 
 				// ## EXPORT ##
 				$export = $this->export($domainData['name'], $newNameFile, $domainData['expt']);
@@ -296,7 +293,7 @@ class SAPI_Serp {
 			if(isset($response->organic_results)){
 				$output = array_merge($output, $response->organic_results);
 				
-#M
+				#M
 				if(isset($response->serpapi_pagination->next)) {
 					if( isset($response->search_parameters->{$q[$response->search_parameters->engine]}) ) {
 						if($currentIndex == $response->search_parameters->{$q[$response->search_parameters->engine]}) 
@@ -325,21 +322,6 @@ class SAPI_Serp {
 		return ['countData' => count($output), 'data' => $output, 'error' => $error];
 	}
 	
-	// not use yet
-	// public function getSavedData($domain = null){
-	// 	$returnData = [];
-		
-	// 	$pathToFind = $this->_receivedDataPath.'*';
-		
-	// 	foreach(glob($pathToFind) as $domainDir) {
-	// 		$domainInDir['name'] = basename($domainDir);
-	// 		if($domain == null) {
-	// 			$domainInDir['files'] = glob($this->_receivedDataPath.basename($domainDir).'/Data/*.json');
-	// 		}
-	// 		$returnData[] = $domainInDir;
-	// 	}
-	// 	return $returnData;
-	// }
 
 	private function startPackages($domainName) {
 		$dataDomainFromPackage = [];
@@ -355,8 +337,6 @@ class SAPI_Serp {
 	private function processData($domainName, $resultSearching) {
 		echo $this->printToConsole("- Processing data ...", 'magenta',);
 		
-		// $pslManager = new Pdp\PublicSuffixListManager();
-		// $parser = new Pdp\Parser($pslManager->getList());
 		
 		$proccessData = [];
 		foreach($resultSearching as $nameQuery => $queryData){
@@ -396,7 +376,7 @@ class SAPI_Serp {
 						$linkData['domain'] = $urlToGetSub->getHost()->getSubdomain() != '' ? str_replace($urlToGetSub->getHost()->getSubdomain().'.', '', $urlToGetSub->getHost()->getHost()) : $urlToGetSub->getHost()->getHost();
 					}
 
-#9
+					#9
 					$dataOutput['data'][] = [
 						'title'		=> $title,
 						'snippet'	=> $snippet,
@@ -496,7 +476,7 @@ class SAPI_Serp {
 			
 			$hasChild = function($child, $hrefLink) use(&$hasChild) {
 				$childHTML = '';
-#9				
+				#A0				
 				foreach($child as $idTree => $tree) {
 					$newHref = $hrefLink.'/'.$idTree;
 					$additionDetails = '';
@@ -696,7 +676,7 @@ class SAPI_Serp {
 				
 				// search result data inside engine
 				foreach($searchResult['data'] as $res) {
-#9
+
 					$contentOther2 .= '
 						<tr>
 							<th scope=\'row\'>'.$countOtherEngineData++.'</th>
@@ -996,7 +976,7 @@ class SAPI_Serp {
 			$output_httpx = shell_exec($cmd_httpx);
 			
 			foreach(explode("\n", $output_httpx) as $line){
-#D
+
 				if($line != null)
 					$outPutData[$subDomain]['dataDomain'] = json_decode($line, true);
 			}
@@ -1096,7 +1076,7 @@ class SAPI_Serp {
 	
 					preg_match('/[$]domainsFile =(.*?)[;]/', file_get_contents(__DIR__.'/conf.php'), $replcaDomain);
 					$newConfig = str_replace($replcaDomain[0], '$domainsFile = \''.$this->_domainsFile.'\';', file_get_contents(__DIR__.'/conf.php'));
-# Y
+
 					if(file_put_contents(__DIR__.'/conf.php', $newConfig)) {
 						echo $this->printToConsole(" ++ ", 'yellow', false);
 						echo $this->printToConsole("New file domain ($this->_domainsFile) was change seccessfuly", 'green', false);
